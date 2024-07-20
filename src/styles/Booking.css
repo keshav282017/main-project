@@ -1,0 +1,135 @@
+.booking-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+}
+.booking-parent {
+  width: 90%;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 60px;
+  background-image: url("/images/book-car/book-bg.png");
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  justify-content: center;
+}
+#booking-form {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  font-size: 18px;
+}
+.bookingform-section {
+  display: flex;
+  flex-direction: column;
+}
+.booking-star {
+  color: red;
+  font-weight: bold;
+}
+.bookingfrom-labels {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.bookingform-section > select,
+input {
+  padding: 10px;
+  border-color: 1px solid gray;
+  color: grey;
+}
+.bookingform-section > button {
+  background-color: #ff4d30;
+  color: white;
+  font-weight: bold;
+  padding: 12px;
+  border: none;
+  margin-top: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+@media only screen and (max-width: 920px) {
+  #booking-form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 700px) {
+  #booking-form {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media only screen and (max-width: 375px) {
+  .bookingfrom-labels {
+    font-size: 14px;
+  }
+
+  .booking-parent {
+    width: 96%;
+  }
+  .booking-parent {
+    margin-top: -150px;
+  }
+  .booking-container {
+    height: 100vh;
+  }
+}
+
+/* Notification */
+
+.booking-notification-btn {
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.booking-notification__error {
+  background-color: pink;
+  color: darkred;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 0px 20px;
+  justify-content: space-between;
+  border-radius: 10px;
+}
+.booking-notification__success {
+  background-color: palegreen;
+  color: green;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 0px 20px;
+  justify-content: space-between;
+  border-radius: 10px;
+}
+
+/* Booking Modal */
+
+.bookingModal-overlay,
+.bookingModal-overlayBack {
+  width: 53rem;
+  height: 100vh;
+  position: fixed;
+  z-index: 99999;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  top: 5%;
+}
+.bookingModal-overlayBack {
+  width: 100%;
+  top: 0;
+  background-color: rgba(78, 76, 76, 0.7);
+}
+
+@media only screen and (max-width: 900px) {
+  .bookingModal-overlay {
+    width: 33rem;
+  }
+}
